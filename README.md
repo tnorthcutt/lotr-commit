@@ -1,16 +1,16 @@
-# commitm - AI-Generated Git Commit Messages
+# lotr-commit - Middle-Earth Generated Git Commit Messages
 
-Use the `commitm` command to generate commit messages, modify them, and commit!
+Use the `lotr-commit` command to generate commit messages, modify them, and commit!
 
-![CleanShot 2024-02-21 at 16 14 29@2x](https://github.com/marissamarym/homebrew-commitm/assets/1459660/c98e14d5-bbac-4562-9d4e-4e5ed906a800)
+![lotr-commit screenshot](https://raw.githubusercontent.com/tnorthcutt/lotr-commit/c1e5a1c11ddf65d8c4d3aa024eb17b2b218790cb/lotr-commit.png)
 
-Inspired by [my brother Adam's AI Shell Command Generator](https://gist.github.com/montasaurus/5ccbe453ef863f702291e763b1b63daf) ([tweet](https://twitter.com/montasaurus_rex/status/1758506549478097383)).
+Forked from https://github.com/marissamarym/commitm
 
 ## Features
 
 - Generates commit messages using the `llm` CLI based on staged changes
 - Allows modifying messages to be more general, specific, longer, shorter etc
-- Commits generated messages (with the prefix 🤖) or custom messages
+- Commits generated messages (with the prefix 🧙) or custom messages
 
 ## Getting Started
 
@@ -23,19 +23,19 @@ Install and configure the [llm](https://llm.datasette.io/en/stable/#quick-start)
 #### Option 1: With Homebrew
 
 ```bash
-brew install marissamarym/commitm/commitm
+brew install tnorthcutt/lotr-commit/lotr-commit
 ```
 
 Or
 
 ```bash
-brew tap marissamarym/commitm
+brew tap tnorthcutt/lotr-commit
 ```
 
 and then
 
 ```bash
-brew install commitm
+brew install lotr-commit
 ```
 
 #### Option 2: From Repo
@@ -43,16 +43,16 @@ brew install commitm
 Clone this repository to your desired location:
 
 ```bash
-git clone https://github.com/marissamarym/commitm.git
+git clone https://github.com/tnorthcutt/lotr-commit.git
 ```
 
 To make the script easily accessible from anywhere, add the following alias to your .zshrc file:
 
 ```bash
-echo 'alias commitm="$HOME/path/to/commitm/src/commitm.zsh"' >> ~/.zshrc
+echo 'alias lotr-commit="$HOME/path/to/lotr-commit/src/lotr-commit.zsh"' >> ~/.zshrc
 ```
 
-Replace `$HOME/path/to/commitm` with the actual path to where you cloned or placed `commitm`.
+Replace `$HOME/path/to/lotr-commit` with the actual path to where you cloned or placed `lotr-commit`.
 
 Apply the changes to your `.zshrc` by running:
 
@@ -65,36 +65,36 @@ source ~/.zshrc
 To generate a commit message:
 
 ```bash
-commitm
+lotr-commit
 ```
 
 To generate a commit message and commit it immediately:
 
 ```bash
-commitm -e
+lotr-commit -e
 ```
 
-To generate a commit message with a custom prefix (✨) (default is 🤖):
+To generate a commit message with a custom prefix (✨) (default is 🧙):
 
 ```bash
-commitm -p ✨
+lotr-commit -p ✨
 ```
 
-To generate a commit message without a custom prefix (default is 🤖):
+To generate a commit message without a custom prefix (default is 🧙):
 
 ```bash
-commitm --no-prefix
+lotr-commit --no-prefix
 ```
 
 To generate a commit message and commit immediately without showing output:
 
 ```bash
-commitm -e -q
+lotr-commit -e -q
 ```
 
 ## Caveats
 
-- `commitm` limits the prompt to 4096 tokens.
+- `lotr-commit` limits the prompt to 4096 tokens.
 
 ## Contributing
 
