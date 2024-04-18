@@ -20,26 +20,6 @@ Install and configure the [llm](https://llm.datasette.io/en/stable/#quick-start)
 
 ### Installation
 
-#### Option 1: With Homebrew
-
-```bash
-brew install tnorthcutt/lotr-commit/lotr-commit
-```
-
-Or
-
-```bash
-brew tap tnorthcutt/lotr-commit
-```
-
-and then
-
-```bash
-brew install lotr-commit
-```
-
-#### Option 2: From Repo
-
 Clone this repository to your desired location:
 
 ```bash
