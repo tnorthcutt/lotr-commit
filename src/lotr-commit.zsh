@@ -1,9 +1,9 @@
 #!/bin/zsh
 
 show_help() {
-    echo "Usage: commitm [OPTIONS]"
+    echo "Usage: lotr-commit [OPTIONS]"
     echo ""
-    echo "Generate commit messages with AI."
+    echo "Generate commit messages from Middle Earth."
     echo ""
     echo "Options:"
     echo "  -e, --execute      Execute the git commit with the generated message."
@@ -15,7 +15,7 @@ show_help() {
 }
 
 show_version() {
-    echo "commitm v1.0.8"
+    echo "lotr-commit v0.0.1"
 }
 
 show_error() {
@@ -26,16 +26,15 @@ show_warning() {
     echo -e "\e[33mWarning: $1\e[0m" >&2
 }
 
-commitm() {
-    local prefix="🤖" # Default prefix
+lotr-commit() {
+    local prefix="🧙" # Default prefix
     local use_prefix=true
     local suppress_output=false
     local system_prompt="Based on these changes, suggest a good commit message, \
         without any quotations around it or a period at the end. \
-        Keep it concise and to the point. \
-        If the diff only changes comments, the commit message should say something to that effect. \
-        Avoid filler words or flowery/corporate language like 'refine'. It should be "
-    local prompt_mod="less than 5 words"
+        It should have one short line, follwed by a newline, then an extended description. \
+        Write it in the style of JRR Tolkein, using language similar to the Lord of the Rings trilogy. It should be "
+    local prompt_mod="less than 25 words"
     local execute_commit=false
     local git_output_temp_file=$(mktemp)
     local commit_message_temp_file=$(mktemp)
@@ -271,4 +270,4 @@ commitm() {
     cleanup
 }
 
-commitm "$@"
+lotr-commit "$@"
